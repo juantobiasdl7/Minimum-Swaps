@@ -10,8 +10,7 @@ function minimumSwaps(arr) {
   let currentArr = [];
   let maxIndex = 0;
   let count = 0;
-  let sortArr = arr.slice(0, arr.length);
-  sortArr.sort();
+
   
   for (let i = arr.length-1; i >= 1; i--) {
 
@@ -22,13 +21,11 @@ function minimumSwaps(arr) {
       arr[maxIndex] = arr[i];
       arr[i] = currentMax;
       count += 1;
+      //i += 1;
+      console.log(i);
     }
 
   max--;
-  
-  if ( arr.toString() == sortArr.toString() ){
-    return count;
-  }
     
   //console.log(arr);
   //console.log(count);
@@ -37,7 +34,7 @@ function minimumSwaps(arr) {
   return count;
 }
 
-console.log(minimumSwaps(arr4));
+//console.log(minimumSwaps(arr4));
 //console.log(minimumSwaps(arr2));
-//console.log(minimumSwaps(arr3));
+console.log(minimumSwaps(arr3));
 
